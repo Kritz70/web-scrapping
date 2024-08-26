@@ -26,6 +26,12 @@ def extract_contact_info(soup):
         if item.find('i', class_='material-icons pmd-list-icon pmd-icon-md md-dark', text='call'):
             phone = item.find('h5', class_='pmd-list-title').get_text(strip=True)
             phone_numbers.append(phone)
+            #pip install
+            !pip install requests beautifulsoup4
+            #download csv file
+from google.colab import files
+files.download("institute_contacts.csv")
+
 
         # Check if the item contains an email address
         if item.find('i', class_='material-icons pmd-list-icon pmd-icon-md md-dark', text='email'):
